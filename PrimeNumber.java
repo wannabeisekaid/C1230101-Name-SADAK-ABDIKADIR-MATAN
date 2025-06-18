@@ -2,27 +2,27 @@ import java.util.*;
 public class PrimeNumber {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int prime;
-        boolean isprime;
+        int PrimeNumber;
+        boolean IsPrimeNumber;
         for (;;) {
             System.out.print("inter prime num: ");
-            prime = scanner.nextInt();
-            isprime = true;
-            if (prime <= 1) {
-                isprime = false;
+            PrimeNumber = scanner.nextInt();
+            IsPrimeNumber = true;
+            if (PrimeNumber <= 1) {
+                IsPrimeNumber = false;
             } else {
-                for (int i = 2; i <= prime / 2; i++) {
-                    if (prime % i == 0) {
-                        isprime = false;
+                for (int i = 2; i <= PrimeNumber / 2; i++) {
+                    if (PrimeNumber % i == 0) {
+                        IsPrimeNumber = false;
                         break;
                     }
                 }
             }
-            if (isprime) {
-                System.out.println(prime + ": is a prime ");
+            if (IsPrimeNumber) {
+                System.out.println(PrimeNumber + ": is a prime number");
                 break;
             } else {
-                System.out.println(prime + " is not a prime, do again");
+                System.out.println(PrimeNumber + " is not a prime number, enter a new number");
        }
 }
     }
